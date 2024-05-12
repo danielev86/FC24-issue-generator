@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <nav th:fragment="navbartemp(activeVar)" class="site-navigation position-relative text-right" role="navigation">
+        <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+            <li th:classappend="${activeVar eq 'index' ? 'active' : ''}"><a th:href="@{/}" class="nav-link">Home</a></li>
+            <li th:classappend="${activeVar eq 'players' ? 'active' : ''}"><a th:href="@{/players}" class="nav-link">Players</a></li>
+            <li th:classappend="${activeVar eq 'teams' ? 'active' : ''}"><a th:href="@{/teams}" class="nav-link">Teams</a></li>
+            <li th:classappend="${activeVar eq 'help' ? 'active' : ''}"><a th:href="@{/transfermarket}" class="nav-link">Market</a></li>
+            <li th:classappend="${activeVar eq 'help' ? 'active' : ''}"><a th:href="@{/help}" class="nav-link">Help</a></li>
+        </ul>
+    </nav>
+</html>
